@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard: Un Baile del Recuerdo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            font-size: 1.75rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #2d3748; /* Darker text */
+            margin-bottom: 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #4299e1; /* Blue dot */
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 0 2px #4299e1;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.35rem;
+            top: 1.5rem;
+            bottom: -0.5rem;
+            width: 2px;
+            background-color: #cbd5e0; /* Light gray line */
+        }
+        .timeline-item:last-child::after {
+            display: none; /* Hide line for last item */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header Section -->
+        <header class="text-center mb-8 card bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6">
+            <h1 class="text-4xl font-extrabold mb-2">Un Baile del Recuerdo</h1>
+            <p class="text-xl font-medium">Organizado por: José María Zeledón Brenes</p>
+            <p class="mt-4 text-lg">"Juntos, cada pequeño esfuerzo construye un futuro mejor para todos."</p>
+        </header>
+
+        <!-- Event Details Section -->
+        <section class="card">
+            <h2 class="section-title flex items-center"><i class="fas fa-calendar-alt mr-3 text-blue-500"></i>Detalles del Evento</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                    <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold">Ubicación:</p>
+                        <p>Escuela José María Zeledón Brenes</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                    <i class="fas fa-calendar-day text-blue-600 text-2xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold">Fecha:</p>
+                        <p>20 de Diciembre de 2025</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm">
+                    <i class="fas fa-clock text-blue-600 text-2xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold">Hora:</p>
+                        <p>6:00 p.m. a 10:00 p.m.</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 bg-blue-50 rounded-lg shadow-sm col-span-1 md:col-span-2 lg:col-span-3">
+                    <i class="fas fa-dollar-sign text-blue-600 text-2xl mr-4"></i>
+                    <div>
+                        <p class="font-semibold">Costo:</p>
+                        <p>₡15.000 por pareja o ₡10.000 individual</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposed Projects Section -->
+        <section class="card">
+            <h2 class="section-title flex items-center"><i class="fas fa-school mr-3 text-green-500"></i>Proyectos Propuestos para la Escuela</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li class="p-2 bg-green-50 rounded-lg shadow-sm">Ampliación del comedor escolar para más espacio.</li>
+                <li class="p-2 bg-green-50 rounded-lg shadow-sm">Mejorar sistema eléctrico de la escuela.</li>
+                <li class="p-2 bg-green-50 rounded-lg shadow-sm">Nueva entrada principal para mejor acceso.</li>
+                <li class="p-2 bg-green-50 rounded-lg shadow-sm">Renovar área preescolar para niños.</li>
+            </ul>
+            <div class="mt-6 text-center">
+                <!-- The link to the projects page is already active and correct -->
+                <a href="https://h1la487.github.io/proyectos/" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-external-link-alt mr-2"></i>Ver Detalles de Proyectos
+                </a>
+            </div>
+        </section>
+
+        <!-- Activity Timeline Section -->
+        <section class="card">
+            <h2 class="section-title flex items-center"><i class="fas fa-clock mr-3 text-purple-500"></i>Cronograma de Actividades</h2>
+            <div class="relative pl-8">
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Fase Inicial</p>
+                    <p class="text-sm text-gray-600">Junio 2025 - Julio 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Actividades de Preparación del Evento</p>
+                    <p class="text-sm text-gray-600">Julio 2025 - Noviembre 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Evento Principal</p>
+                    <p class="text-sm text-gray-600">Diciembre 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Fase de Ejecución (Proyectos)</p>
+                    <p class="text-sm text-gray-600">Diciembre 2025 - Enero 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Publicación, Ejecución de Proyecto, Rendición de Cuentas</p>
+                    <p class="text-sm text-gray-600">Enero 2026 - Febrero 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="font-semibold text-gray-800">Fase de Cierre y Seguimiento</p>
+                    <p class="text-sm text-gray-600">Febrero 2026</p>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <!-- New link to the detailed cronograma.html file -->
+                <a href="https://drive.google.com/file/d/1mKuHmum8VYmoDgoLLKJfy8ZZ-ZYSX6Hz/view?usp=sharing" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-file-alt mr-2"></i>Ver Cronograma Detallado
+                </a>
+            </div>
+        </section>
+
+        <!-- Support Commissions Section -->
+        <section class="card">
+            <h2 class="section-title flex items-center"><i class="fas fa-users mr-3 text-orange-500"></i>Comisiones de Apoyo Requeridas</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li class="p-2 bg-orange-50 rounded-lg shadow-sm">Apoyo necesario en la Comisión de Mobiliario.</li>
+                <li class="p-2 bg-orange-50 rounded-lg shadow-sm">Se requieren edecanes para el evento.</li>
+                <li class="p-2 bg-orange-50 rounded-lg shadow-sm">Comisión de Caja y Finanzas.</li>
+                <li class="p-2 bg-orange-50 rounded-lg shadow-sm">Comisión de Venta de Alimentos y Limpieza.</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action / Q&A Section -->
+        <section class="card text-center bg-indigo-50 p-6">
+            <h2 class="section-title flex items-center justify-center text-indigo-700"><i class="fas fa-hand-sparkles mr-3"></i>¡Juntos, hacemos la magia posible!</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Tu participación es la clave para que este baile sea un rotundo éxito y un legado de alegría para las futuras generaciones.
+            </p>
+            <p class="text-xl font-bold text-indigo-800 mb-6">
+                ¡Anímate a ser parte de esta historia! Tu esfuerzo cuenta, tu pasión inspira.
+            </p>
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Temas Varios y Preguntas</h3>
+                <p class="text-gray-700">
+                    Tendremos una sesión de preguntas y respuestas para clasificar cualquier inquietud restante, abordar temas adicionales pendientes y un espacio para comentarios y sugerencias.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-8 text-gray-500 text-sm">
+            <p>&copy; 2025 Baile del Recuerdo. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
